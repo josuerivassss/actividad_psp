@@ -4,33 +4,39 @@ using namespace std;
 // PROYECTO 1 DE ACTIVIDADES PSP
 
 int main() {
-    int a, b, c;
+    int ladoA, ladoB, ladoC;
     cout << "Ingresa el valor de A: ";
-    cin >> a;
+    cin >> ladoA;
     cout << "Ingresa el valor de B: ";
-    cin >> b;
+    cin >> ladoB;
     cout << "Ingresa el valor de C: ";
-    cin >> c;
+    cin >> ladoC;
 
-    if((a == 0 && b == 0 && c == 0) || (a < b && a < c && b != 0 && c != 0))
-    cout << "Los valores no indican figura";
-    else {
-        if(a == 0 || b == 0 || c == 0) {
-            if((a == b && a != 0) || (b == c && b != 0) || (a == c && a != 0))
-            cout << "La figura es un cuadrado";
-            else {
-                if((a == 0 && b == 0) || (b == 0 && c == 0) || (a == 0 && c == 0))
-                cout << "La figura es un circulo";
-                else cout << "La figura es un rectangulo";
+    if ((ladoA == 0 && ladoB == 0 && ladoC == 0) || (ladoA < ladoB && ladoA < ladoC && ladoB != 0 && ladoC != 0)) {
+        cout << "Los valores no indican figura";
+    } else {
+        if (ladoA == 0 || ladoB == 0 || ladoC == 0) {
+            if ((ladoA == ladoB && ladoA != 0) || (ladoB == ladoC && ladoB != 0) || (ladoA == ladoC && ladoA != 0)) {
+                cout << "La figura es un cuadrado";
+            } else {
+                if ((ladoA == 0 && ladoB == 0) || (ladoB == 0 && ladoC == 0) || (ladoA == 0 && ladoC == 0)) {
+                    cout << "La figura es un circulo";
+                } else {
+                    cout << "La figura es un rectangulo";
+                }
             }
         } else {
-            if(a == b && b == c) cout << "La figura es un triangulo equilatero";
-            else {
-                if(a == b || b == c || a == c) cout << "La figura es un triangulo isoceles";
-                else cout << "La figura es un triangulo escaleno";
+            if (ladoA == ladoB && ladoB == ladoC) {
+                cout << "La figura es un triangulo equilatero";
+            } else {
+                if (ladoA == ladoB || ladoB == ladoC || ladoA == ladoC) {
+                    cout << "La figura es un triangulo isoceles";
+                } else {
+                    cout << "La figura es un triangulo escaleno";
+                }
             }
         }
-    } 
+    }
 
     return 0;
 }
